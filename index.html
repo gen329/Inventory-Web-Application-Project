@@ -16,8 +16,24 @@
         <header>
             <h1>Affirmation Candle Inventory</h1>
         </header>
-
-        
-      
     </body>
+
+    <main>
+        <section class="candle-inventory">
+            <h2>Candle Inventory</h2>
+            <form id="candle-inventory">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" required/>
+                <label for="scent">SCENT</label>
+                <input id="scent" name="scent" type="text" required/>
+                <label for="price">PRICE</label>
+                <input id="price" name="price" type="number" required/>
+                <label for="in-stock">IN STOCK</label>
+                <select id="in-stock" name="in-stock">
+                    <option value="1">In-Stock</option>
+                    <option value="2">Out-of-Stock</option>
+                </select>
+            </form>
+        </section>
+    </main>
 </html>
