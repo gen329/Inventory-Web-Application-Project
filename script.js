@@ -11,12 +11,12 @@ form.addEventListener("submit", (event) => {
     const remove = document.createElement("button")
 
     candleName.textContent = candleListing.name.value;
-    li.append(candleName,candlePrice,candleImg, remove);
+    li.append(candleName, candlePrice, candleImg, remove);
     ul.append(li)
 
     remove.innerText = "Remove Candle"
-    
-    
+
+
     remove.addEventListener("click", (event) => {
         console.log('clicked!')
         li.remove();
@@ -33,6 +33,5 @@ document.body.append(ul)
     //         size: event.target.size.value,
     //         inStock: event.target.inStock.value,
     //     }
-    
-    
-    
+
+
