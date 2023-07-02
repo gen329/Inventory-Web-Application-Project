@@ -8,9 +8,6 @@
     "footer footer footer";
 }
 
-@media (max-width: 499px) {
-}
-
 body {
     background-color: cornsilk;
 }
@@ -23,6 +20,18 @@ header {
   height: 100px;
   background-color: pink;
   color: white;
+  @media (max-width: 390px) {
+    margin-top: 0;
+    padding-top: 0;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+fieldset{
+    margin-top: 50px;
+    width: 50%;
+
 }
 
 header h1 {
@@ -37,11 +46,6 @@ img {
 
 button {
     background-color: lightblue;
-}
-
-.candle-inventory {
-    display: grid;
-    box-sizing: content-box;
 }
 
 form input,
