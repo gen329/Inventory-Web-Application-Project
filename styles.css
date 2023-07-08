@@ -15,8 +15,6 @@
   background-color: cornsilk;
 }
 
-
-
 header {
   display: flex;
   justify-content: center;
@@ -42,14 +40,11 @@ h3 {
   font-weight: normal;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   font-family: Georgia;
 }
 
-#img {
+.img {
   height: 150px;
   width: 150px;
   padding-top: 25px;
@@ -68,13 +63,14 @@ p {
   height: 100%;
   width: 100%;
   padding-top: 25px;
+ 
 }
+
 button {
   background-color: lightblue;
 }
 
-form input,
-form label {
+form input, form label {
   box-sizing: border-box;
   display: block;
   margin: 5px 0;
