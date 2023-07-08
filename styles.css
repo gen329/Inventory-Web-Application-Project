@@ -1,73 +1,82 @@
+@media (min-width: 800px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "footer footer footer";
+  grid-template-rows: minmax(100px, auto);
+  column-gap: 120px;
+  background-color: cornsilk;
 }
 
-body {
-    background-color: cornsilk;
-}
+
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-family: Georgia;
   font-size: 20px;
-  grid-area: header;
-  height: 100px;
+  height: 150px;
   background-color: pink;
   color: white;
-    }
-}
-fieldset{
-    margin-top: 50px;
-    width: 75px;
 }
 
-header h1 {
+h1 {
   margin: 0;
   padding: 25px;
 }
 
 h2 {
-    font-family: Georgia;
-    color: black;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
-ul {
-    list-style: none;
-    
+h3 {
+  font-size: medium;
+  font-weight: normal;
 }
 
-img {
-    height: 150px;
-    width: 150px;
-    position: under;
+h1,
+h2,
+h3,
+p {
+  font-family: Georgia;
 }
 
+#img {
+  height: 150px;
+  width: 150px;
+  padding-top: 25px;
+}
 
+#left {
+  grid-column: 1;
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+  margin-left: 5%;
+}
+
+#right {
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+}
 button {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 form input,
-form label,
-form textarea {
-    box-sizing:border-box;
-    display: block;
-    margin: 5px 0;
-    width: 50%;
-}
-
-@media (max-width: 499px) {
-    header {
-        margin-top: 0;
-        padding-top: 0;
-        height: 50px;
-        font-size: 12px;
-        padding-bottom: 50px;
-    }
+form label {
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 0;
+  width: 50%;
 }
