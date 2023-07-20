@@ -1,3 +1,4 @@
+
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
@@ -13,6 +14,32 @@ form.addEventListener("submit", (event) => {
     newCandle(name, scent, price, img, size, inStock);
     form.reset();
 });
+const candleOne = document.querySelector("article.candle1")
+const removeButtonOne = document.querySelector("button.candle1")
+const inStockCandles = document.querySelector("section.inStockCandles")
+removeButtonOne.addEventListener("click", (event) => {
+    {
+        candleOne.remove()
+    }
+    return inStockCandles;
+})
+
+const candleTwo = document.querySelector("article.candle2")
+const removeButtonTwo = document.querySelector("button.candle2")
+removeButtonTwo.addEventListener("click", (event) => {
+    {
+        candleTwo.remove()
+    }
+    return inStockCandles;
+})
+const candleThree = document.querySelector("article.candle3")
+const removeButtonThree = document.querySelector("button.candle3")
+removeButtonThree.addEventListener("click", (event) => {
+    {
+        candleThree.remove()
+    }
+    return inStockCandles;
+})
 
 function newCandle(name, scent, price, size, img, inStock) {
     const article = document.createElement("article");
@@ -50,11 +77,7 @@ function newCandle(name, scent, price, size, img, inStock) {
     }
 }
 
-function removeCandle() {
-    const remove = document.createElement("#button");
-    const article = document.querySelector("article");
-    remove.innerText = "Remove";
-    article.append(remove)
+
 
 
     const removeButtons = document.querySelector
@@ -68,11 +91,10 @@ function removeCandle() {
     removeButtons.addEventListener("click", (event) => {
         ul.remove();
     });
-}
-function toggleInStock(element) {
-    element.addEventListener("click", (event) => {
-        element.parentNode.classList.toggle("In Stock");
-        let innerButtonText = element.innerText === "In Stock" ? "Out of Stock"
-    element.innerText = innerButtonText;
-    }));
-}
+
+// function toggleInStock(element) {
+//     element.addEventListener("click", (event) => {
+//         let innerButtonText = element.innerText === "In Stock" ? "Out of Stock"
+//         element.innerText = innerButtonText;
+//     });
+// }

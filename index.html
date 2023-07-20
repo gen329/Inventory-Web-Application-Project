@@ -13,82 +13,100 @@
 </head>
 
 <body>
-    <section class="container"></section>
     <header>
         <h1>Affirmation Candle Inventory</h1>
     </header>
-    <main>
-        <article>
-            <form id="candle-inventory">
-                <fieldset>
-                    <label for="name">NAME</label>
-                    <input id="name" name="name" type="text" required />
-
-                    <label for="scent">SCENT</label>
-                    <input id="scent" name="scent" type="text" required />
-
-                    <label for="price">PRICE</label>
-                    <input id="price" name="price" type="number" required />
-
-                    <label for="img">IMAGE</label>
-                    <input id="img" name="img" type="text" required />
-
-                    <label for="size">SIZE</label>
-                    <select id="size" name="size">
-                        <option value="9-oz">9 oz.</option>
-                        <option value="16-oz">16 oz.</option>
-                    </select>
-
-                    <label for="inStock">IN STOCK</label>
-                    <select id="inStock" name="inStock">
-                        <option value="1">In-Stock</option>
-                        <option value="2">Out-of-Stock</option>
-                    </select>
-
-                    <button id="reset" type="submit">Submit</button>
-                    <button id="submit" type="reset">Reset</button>
-                </fieldset>
-            </form>
-        </article>
-
-        <article>
-            <ul id="candleList">
-                <li>
+    <section class="container">
+        <div class="box" id="left">
+            <section class="inStockCandles">
+                <article class="candle1">
                     <h2>Blessed and Highly Favored</h2>
-                    <img class="candle"
-                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/C3B4F5CD-6740-4FFA-9567-D1EA5667F64C.jpg?v=1668576856&width=1100"
-                        alt="Blessed and Highly Favored" />
-                    <br>
-                    <h3>Scent: Golden Amber</h3>
-                    <p>Price: $19.99</p>
-                    <h4>Size: 9oz.</h4>
-                    <button id="remove">Remove</button>
-                    <br><button id="inStock">In-Stock</button>
+                    <div class="scent">
+                        <h3>Golden Amber</h3>
+                    </div>
+                    <div class="size">
+                        <h4>9 oz.</h4>
+                    </div>
+                    <div class="price">
+                        <p>$19.99</p>
+                    </div>
+                    <img 
+                        class="img" id="candle1"
+                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/C3B4F5CD-6740-4FFA-9567-D1EA5667F64C.jpg?v=1668576856&width=1100">
+                    </img>
+                   <br><button class="inStock" type="reset">In-Stock</button>
+                   <br><button class="candle1" type="reset">Remove</button>
+                </article>
 
+                <article class="candle2"> 
                     <h2>I Am Worthy</h2>
-                    <img class="worthy"
-                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/923AD360-8559-41CB-82C9-3F4831E2F0B0.jpg?v=1669124356&width=1100"
-                        alt="I Am Worthy" <br>
-                    <h3>Scent: Crisp Forest</h3>
-                    <p>Price: $19.99</p>
-                    <h4>Size: 9oz.</h4>
-                    <button id="remove">Remove</button>
-                    <br><button id="inStock">In-Stock</button>
+                    <div class="scent">
+                        <h3>Crisp Forest</h3>
+                    </div>
+                    <div clas="size">
+                        <h4>9 oz.</h4>
+                    <div class="price">
+                        <p>$19.99</p>
+                    </div>
+                    <img 
+                        class="img" id="candle2"
+                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/923AD360-8559-41CB-82C9-3F4831E2F0B0.jpg?v=1669124356&width=1100">
+                    </img>
+                    <br><button class="inStock" type="reset">In-Stock</button>
+                    <br><button class="candle2" type="reset">Remove</button>
+                </article>
 
+                <article class="candle3">
                     <h2>I Am Enough</h2>
-                    <img class="enough"
-                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/3D632868-E645-4950-8D26-03A3DD6EB442.jpg?v=1669124524&width=1100"
-                        alt="I Am Enough" <br>
-                    <h3>Scent: Sandalwood Patchouli</h3>
-                    <p>Price: $19.99</p>
-                    <h4>Size: 9oz.</h4>
-                    <button id="remove">Remove</button>
-                    <br><button id="inStock">In-Stock</button>
+                    <div class="scent">
+                        <h3>Crisp Forest</h3>
+                    </div> 
+                    <div clas="size">
+                        <h4>9 oz.</h4>
+                    <div class="Price">
+                        <p>$19.99</p>
+                    </div>
+                    <img
+                        class="img" id="candle3"
+                        src="https://cdn.shopify.com/s/files/1/0615/2064/2273/products/3D632868-E645-4950-8D26-03A3DD6EB442.jpg?v=1669124524&width=1100">
+                    </img>
+                    <br><button class="inStock" type="reset">In-Stock</button>
+                    <br><button class="candle3" type="reset">Remove</button>
+                </article>
+            </section>
+        </div>
 
-                </li>
-            </ul>
-        </article>
-    </main>
+        <div class="new-candle-form" id="right">
+            <form id="new-candles">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" required />
+
+                <label for="scent">SCENT</label>
+                <input id="scent" name="scent" type="text" required />
+
+                <label for="price">PRICE</label>
+                <input id="price" name="price" type="number" required />
+
+                <label for="img">IMAGE</label>
+                <input id="img" name="img" type="file" accept="image/*"/>
+
+                <label for="size">SIZE</label>
+                <select id="size" name="size">
+                    <option value="9-oz">9 oz.</option>
+                    <option value="16-oz">16 oz.</option>
+                </select>
+
+                <label for="inStock">IN STOCK</label>
+                <select id="inStock" name="inStock">
+                    <option value="1">In-Stock</option>
+                    <option value="2">Out-of-Stock</option>
+                </select>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
+
