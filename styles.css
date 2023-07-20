@@ -1,78 +1,76 @@
-@media (min-width: 800px) {
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-    margin: 0%;
-  }
-}
-
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(100px, auto);
-  column-gap: 120px;
-  background-color: cornsilk;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "form form main main"
+    "footer footer footer";
+}
+
+body {
+    background-color: cornsilk;
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-family: Georgia;
   font-size: 20px;
-  height: 150px;
+  grid-area: header;
+  height: 100px;
   background-color: pink;
   color: white;
 }
 
-h1 {
+fieldset{
+  margin-top: 50px;
+  width: 75px;
+}
+
+form input,
+form label,
+form textarea {
+    grid-area: form;
+    box-sizing:border-box;
+    display: block;
+    margin: 5px 0;
+}
+header h1 {
   margin: 0;
-  padding-top: 50px;
+  padding: 25px;
 }
 
-h2 {
-  font-size: xx-large;
-  font-weight: bolder;
+h2,
+h3,
+h4 {
+    font-weight: lighter;
+    font-family: Georgia;
+    color: black;
 }
 
-h3 {
-  font-size: medium;
-  font-weight: normal;
+ul {
+    list-style: none;
+    
 }
 
-h1, h2, h3, p {
-  font-family: Georgia;
-}
-
-.img {
-  height: 150px;
-  width: 150px;
-  padding-top: 25px;
-}
-
-#left {
-  grid-column: 1;
-  height: 100%;
-  width: 100%;
-  padding-top: 25px;
-  margin-left: 5%;
-}
-
-#right {
-  grid-column: 2;
-  height: 100%;
-  width: 100%;
-  padding-top: 25px;
- 
+img {
+    height: 150px;
+    width: 150px;
+    position: under;
 }
 
 button {
-  background-color: lightblue;
+    background-color: lightblue;
 }
 
-form input, form label {
-  box-sizing: border-box;
-  display: block;
-  margin: 5px 0;
-  width: 50%;
+
+@media (max-width: 499px) {
+    header {
+        grid-column: 1fr;
+        margin-top: 0;
+        padding-top: 0;
+        height: 50px;
+        font-size: 12px;
+        padding-bottom: 50px;
+    }
 }
